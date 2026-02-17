@@ -1,0 +1,96 @@
+PLANTILLA DE IDEA DE EMPRENDIMIENTO INNOVA TECH LAB - AGROCONECTA
+================================================================================
+1. NOMBRE DEL NEGOCIO:
+================================================================================
+AgroConecta
+Conecta el sector agrícola con consumidores, eliminando intermediarios entre el campo colombiano y el mercado.
+
+================================================================================
+2. PROBLEMA/OPORTUNIDAD IDENTIFICADA:
+================================================================================
+PROBLEMA: 
+Los campesinos colombianos reciben precios muy bajos por sus productos debido  a intermediarios que compran barato en fincas y revenden caro en ciudades. Esto genera:
+- Descontento en el sector campesino
+- Abandono del campo
+- Pérdida de productos por falta de canales de venta
+- Precios injustos para productores y consumidores
+
+OPORTUNIDAD:
+- Sector agropecuario fundamental para la economía colombiana
+- Demanda creciente de productos frescos y locales
+- Tendencia hacia comercio justo
+- Crecimiento del e-commerce
+- Apoyo gubernamental al campo
+
+================================================================================
+3. SOLUCIÓN/PRODUCTO O SERVICIO OFRECIDO:
+================================================================================
+AgroConecta es un marketplace digital que conecta directamente campesinos con consumidores, restaurantes y compradores mayoristas.
+FUNCIONALIDADES:
+Para campesinos:
+- Publicar productos con precios justos
+- Gestionar inventario
+- Recibir y gestionar pedidos
+- Ver estadísticas de ventas
+Para compradores:
+- Buscar productos por categoría y ubicación
+- Hacer pedidos individuales o mayoristas
+- Ver perfiles de campesinos
+- Seguimiento de pedidos
+
+MODELO DE NEGOCIO:
+Comisión mínima para sostener la plataforma, sin márgenes abusivos.
+================================================================================
+4. PROPUESTA DE VALOR ÚNICA:
+================================================================================
+PARA CAMPESINOS:
+- Acceso directo al mercado
+- Precios justos
+- Herramientas digitales gratuitas
+- Capacitación tecnológica
+
+PARA COMPRADORES:
+- Productos frescos directo de finca
+- Precios competitivos
+- Transparencia de origen
+- Apoyo al campo colombiano
+
+DIFERENCIADORES:
+- Modelo ético enfocado en ecosistema sostenible
+- Impacto social directo en familias campesinas
+- Tecnología inclusiva y accesible
+- Comisión justa y transparente
+================================================================================
+5. TECNOLOGÍA APLICADA:
+================================================================================
+FRONTEND:
+- Aplicación web responsive con React/Next.js
+- Interfaz simple e intuitiva
+- Chat integrado entre campesinos y compradores
+
+BACKEND:
+- API RESTful con Node.js/Express o Spring
+- Base de datos PostgreSQL/MongoDB
+- Motor de búsqueda con filtros por ubicación, tipo y precio
+
+OPTIMIZACIÓN:
+- Algoritmos IA para agrupar pedidos por zona
+- Notificaciones push y SMS
+
+PAGOS:
+- Pasarelas de pago seguras
+- Pago contra entrega
+- Billetera digital
+
+ACCESIBILIDAD:
+- Versión SMS para usuarios sin smartphone
+- Tutoriales en video
+- Panel administrativo visual
+
+IMPACTO TECNOLÓGICO:
+
+1. Elimina barreras geográficas
+2. Reduce costos operativos
+3. Empodera campesinos con datos
+4. Genera transparencia
+5. Permite escalabilidad nacional

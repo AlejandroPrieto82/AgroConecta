@@ -1,0 +1,111 @@
+DOCUMENTO DE REQUERIMIENTOS V1 - AGROCONECTA
+
+1. INFORMACIÓN GENERAL
+NOMBRE DEL PROYECTO: AgroConecta
+DESCRIPCIÓN GENERAL: Marketplace que conecta campesinos colombianos con compradores directamente, eliminando intermediarios mediante precios justos y comisiones mínimas.
+
+2. PROBLEMA/OPORTUNIDAD
+¿QUÉ PROBLEMA ESTÁN RESOLVIENDO?
+Campesinos reciben precios bajos por intermediarios que compran barato y revenden caro. Esto genera descontento, abandono del campo y precios injustos.
+¿QUIÉNES SON LOS USUARIOS OBJETIVO?
+- Campesinos y productores agrícolas colombianos
+- Consumidores finales en zonas urbanas
+- Restaurantes y tiendas
+- Compradores mayoristas
+
+3. SOLUCIÓN PROPUESTA
+DESCRIPCIÓN DE LA SOLUCIÓN: Plataforma marketplace que permite a campesinos publicar productos con precios justos y a compradores adquirirlos directamente. Incluye gestión de inventario, pedidos, pagos seguros y chat.
+PROPUESTA DE VALOR ÚNICA: Modelo ético con comisión mínima, tecnología inclusiva para usuarios con poca experiencia digital, impacto social directo y transparencia total.
+
+4. FUNCIONALIDADES PRINCIPALES
+OBLIGATORIAS:
+- Registro e inicio de sesión (campesinos y compradores)
+- Publicación de productos por campesinos
+- Búsqueda y filtrado de productos por ubicación, tipo y precio
+- Gestión de pedidos (crear, recibir, actualizar estado)
+- Sistema de chat entre campesinos y compradores
+- Panel de administración para campesinos (inventario, ventas)
+- Panel para compradores (pedidos, seguimiento)
+OPCIONALES:
+- Integración de pasarelas de pago
+- Sistema de notificaciones push y SMS
+- Pago contra entrega
+- Billetera digital interna
+- Algoritmos de agrupación de pedidos por zona
+FUTURAS MEJORAS:
+- App móvil nativa
+- Versión SMS para usuarios sin smartphone
+- Sistema de reputación y valoraciones
+- Predicción de demanda con IA
+- Tutoriales en video integrados
+
+5. HISTORIAS DE USUARIO
+CAMPESINO:
+- Como campesino, quiero registrarme en la plataforma, para vender mis productos directamente sin intermediarios.
+- Como campesino, quiero publicar mis productos con fotos y precios, para que los compradores los vean y compren.
+- Como campesino, quiero recibir notificaciones de nuevos pedidos, para atenderlos rápidamente.
+- Como campesino, quiero ver mis estadísticas de ventas, para entender mi negocio.
+- Como campesino, quiero chatear con compradores, para resolver dudas sobre mis productos.
+COMPRADOR:
+- Como comprador, quiero buscar productos por ubicación y tipo, para encontrar lo que necesito cerca de mí.
+- Como comprador, quiero ver el perfil del campesino, para conocer el origen de los productos.
+- Como comprador, quiero hacer pedidos individuales o al por mayor, para comprar según mis necesidades.
+- Como comprador, quiero pagar de forma segura en línea, para completar mi compra sin riesgos.
+- Como comprador, quiero hacer seguimiento de mis pedidos, para saber cuándo llegarán.
+ADMINISTRADOR:
+- Como administrador, quiero gestionar usuarios, para mantener la plataforma segura.
+- Como administrador, quiero ver reportes de transacciones, para monitorear el funcionamiento de la plataforma.
+
+6. MODELO DE DATOS
+ENTIDADES PRINCIPALES:
+Usuario: ID, nombre, correo, contraseña (hash), teléfono, tipo (campesino/comprador), ubicación, fecha_registro, estado_cuenta
+Campesino (extiende Usuario): nombre_finca, descripción, foto_perfil, productos_publicados
+Producto: ID, nombre, descripción, categoría, precio, unidad_medida, cantidad_disponible, fotos, campesino_ID, fecha_publicación, estado (disponible/agotado)
+Pedido: ID, comprador_ID, productos (array), total, estado (pendiente/confirmado/enviado/completado/cancelado), fecha_creación, dirección_entrega
+Transacción: ID, pedido_ID, monto, método_pago, estado, fecha, comisión_plataforma
+Mensaje: ID, emisor_ID, receptor_ID, contenido, fecha_envío, leído
+RELACIONES:
+- Un campesino puede tener múltiples productos
+- Un producto pertenece a un campesino
+- Un pedido puede incluir múltiples productos
+- Un comprador puede hacer múltiples pedidos
+- Un pedido genera una transacción
+- Usuarios pueden intercambiar múltiples mensajes
+
+7. TECNOLOGÍA PROPUESTA
+BACKEND: Node.js con Express o Spring Boot
+BASE DE DATOS: PostgreSQL o MongoDB
+FRONTEND: React con Next.js
+AUTENTICACIÓN: JWT
+PAGOS: Mercado Pago, PayU o PSE
+NOTIFICACIONES: Firebase Cloud Messaging, Twilio
+INFRAESTRUCTURA: Docker, AWS/Google Cloud
+BÚSQUEDA: Elasticsearch (opcional)
+
+8. REQUISITOS FUNCIONALES
+RF-01: El sistema debe permitir registro de usuarios como campesino o comprador
+RF-02: Los campesinos deben poder publicar productos con fotos, descripción y precio
+RF-03: Los compradores deben poder buscar productos por ubicación, categoría y precio
+RF-04: El sistema debe permitir crear pedidos con uno o múltiples productos
+RF-05: Los campesinos deben recibir notificación de nuevos pedidos
+RF-06: El sistema debe procesar pagos mediante pasarelas seguras
+RF-07: Los usuarios deben poder chatear en tiempo real
+RF-08: Los campesinos deben poder actualizar inventario de productos
+RF-09: Los compradores deben poder ver estado de sus pedidos
+RF-10: El sistema debe calcular comisión de la plataforma automáticamente
+
+9. REQUISITOS NO FUNCIONALES
+RENDIMIENTO: Búsqueda de productos en menos de 4 segundos, carga de página principal en menos de 5 segundos
+ESCALABILIDAD: Soportar al menos 1,000 usuarios simultáneos, base de datos debe manejar mínimo 10,000 productos
+SEGURIDAD: Contraseñas encriptadas con bcrypt, API protegida con JWT, conexiones HTTPS obligatorias, validación de datos en frontend y backend
+USABILIDAD: Interfaz intuitiva para usuarios con baja experiencia digital, responsive design
+DISPONIBILIDAD: Sistema disponible 90% del tiempo, backups diarios de base de datos
+
+10. CRITERIOS DE ÉXITO
+- Sistema permite registro y autenticación sin errores
+- Campesinos pueden publicar productos exitosamente
+- Compradores pueden buscar, filtrar y hacer pedidos
+- Chat funciona en tiempo real
+- Sistema se despliega en la nube con URL pública accesible
+- Al menos 50 campesinos registrados en primeros 3 meses (piloto)
+- Tasa de satisfacción de usuarios mayor al 80%
